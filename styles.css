@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'MyCustomFont'; /* Give your font a name */
+    src: url('https://fonts.google.com/specimen/Montserrat') format('woff2'); /* Modern browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --Dark_cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very_dark blue: hsl(212, 21%, 14%);
+    --Dark_grayish blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+}
