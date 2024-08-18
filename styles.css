@@ -1,17 +1,132 @@
-@font-face {
-    font-family: 'MyCustomFont'; /* Give your font a name */
-    src: url('https://fonts.google.com/specimen/Montserrat') format('woff2'); /* Modern browsers */
-    font-weight: normal;
-    font-style: normal;
+:root {
+  --Dark_cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very_dark_blue: hsl(212, 21%, 14%);
+  --Dark_grayish_blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
 }
 
-:root {
-    --Dark_cyan: hsl(158, 36%, 37%);
-    --Cream: hsl(30, 38%, 92%);
-    --Very_dark blue: hsl(212, 21%, 14%);
-    --Dark_grayish blue: hsl(228, 12%, 48%);
-    --White: hsl(0, 0%, 100%);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--Cream);
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--White);
+  width: 95%;
+  margin: 29px 16px;
+  border-radius: 15px;
+}
+
+.image1 {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  visibility: visible;
+  position: relative;
+}
+
+.image2 {
+  height: 100%;
+  border-radius: 15px 0 0 15px;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+
+section {
+  width: 100%;
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+}
+
+section * {
+  padding: 3%;
+}
+
+.categoria {
+  text-transform: uppercase;
+  letter-spacing: 0.9vh;
+  color: var(--Dark_cyan);
+  font-size: 0.6em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+p {
+  color: var(--Dark_cyan);
+  font-size: 0.9em;
+}
+
+.precio {
+  display: flex;
+  align-items: center;
+}
+
+.nuevo {
+  width: 50%;
+  color: var(--Dark_cyan);
+  font-weight: 700;
+  font-size: 1.8em;
+}
+
+.antes {
+  font-size: 0.8em;
+  text-decoration: line-through;
+  color: var(--Dark_cyan);
+  width: 50%;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  background: var(--Dark_grayish_blue);
+  color: var(--White);
+  font-weight: 400;
+  align-items: center;
+}
+
+button:hover {
+  background: var(--Very_dark_blue);
+}
+
+button svg {
+  padding: 0;
+}
+
+span {
+  text-align: center;
+}
+
+@media screen and (min-width: 470px) {
+  main {
+    flex-direction: row;
+  }
+  .image1 {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .image2 {
+    visibility: visible;
+    position: relative;
+  }
 }
