@@ -26,7 +26,8 @@ main {
   flex-direction: column;
   align-items: center;
   background: var(--White);
-  width: 95%;
+  width: 90vw;
+  height: 110vw;
   margin: 29px 16px;
   border-radius: 15px;
 }
